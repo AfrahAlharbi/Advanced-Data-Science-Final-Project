@@ -10,7 +10,7 @@ Frist of all the aim is to explore breast cancer dataset. The features of the da
 RangeIndex: 569 entries, 0 to 568
 Data columns (total 32 columns):
 
- #   Column                      Non-Null Count  Dtype  
+
 ---  ------                      --------------  -----  
  0   ID                          569 non-null    int64  
  1   diagnosis                   569 non-null    object 
