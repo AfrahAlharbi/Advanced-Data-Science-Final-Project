@@ -54,4 +54,4 @@ So we have 569 records against 32 columns and all of them have 569 non-null reco
 
 
 
-![alt text](https://github.com/ibra-him766/Advanced-Data-Science-Final-Project/Image/target_column.png)
+![text_alt](Image/target_column.png)
