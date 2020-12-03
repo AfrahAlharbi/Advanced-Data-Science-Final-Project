@@ -85,3 +85,68 @@ Random Forsest Accuracy on Test Data: 0.9649122807017544 , F1 : 0.97247706422018
 The average accuracy of the Random Forest classifier is : 0.95.
 
 ![text_alt](Image/Confusion_Matrix.png)
+
+About the Overfit
+Moreover, Accuracy gap between training and testing dataset is not wide, so our model isn't overfitting.
+If our model does much better on the training set than on the test set, then we’re likely overfitting.Second point we use 2-Cross-validation to prevent overfitting.
+
+Lets test these features with SVM classifier.
+
+Support Vector Machine  Accuracy on Test Data: 0.9649122807017544 , F1 : 0.9722222222222222.
+
+
+
+
+#### Principal component analysis (PCA)
+Principal component analysis (PCA) is a technique for reducing the dimensionality https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html.
+
+![text_alt](Image/PCA.png)
+
+
+As shown on the last plot. 11 componants give us high accuracy. We adopt this number.
+
+Random Forsest Accuracy on Test Data: 0.9415204678362573 , F1 : 0.9537037037037037.
+Support Vector Machine  Accuracy on Test Data: 0.9649122807017544 , F1 : 0.9724770642201834.
+
+
+
+
+#### Feature Selection by using Correlation Heatmap.
+
+![text_alt](Image/e1_strong_correlation_between_columns.png)
+As we seen in the heatmap each two-column show less than 0.9 we selected and the greater than 0.9 we drop one of them.
+
+
+the columns we going to drop it 'perimeter_mean','area_mean','concave_points_mean','perimeter_sd_error','area_sd_error','radius_worst', 'texture_worst', 'perimeter_worst', 'area_worst' and 'concave_points_worst'are highly correlated.That why we remove it.
+
+
+
+Random Forsest Accuracy on Test Data: 0.9766081871345029 , F1 : 0.981651376146789
+
+Support Vector Machine  Accuracy on Test Data: 0.9473684210526315 , F1 : 0.9589041095890412.
+
+
+
+let try Deep learning with pca .
+
+#### Deep Learning with PCA.
+
+Activation Functions is relu.
+Loss Function is Binary Crossentropy.
+optimizer is adam.
+
+We get 0.9590643.
+
+
+
+
+
+
+### Summary:
+The data is almost normally distributed and it's not skewed. 37% of variables are highly correlated and have similar affect on data.
+
+As we have tested 2 models with 3 feature selection techniques and Random Forest worked best with Feature Importance using Extra Tree Classified feature selection in our case with 20 features.SVM with PCA show the same accuracy but with 11 features and that we will use as our final model.Both of them achived on F1 98.1%
+
+finally, we use a neural network that achieved 96.5%, not bad accuracy. Right !!.
+
+The data is divided into training(70%) and testing(30%) and Random forest model scored well with the testing dataset.
