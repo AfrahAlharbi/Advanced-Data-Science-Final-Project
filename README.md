@@ -69,7 +69,7 @@ Cross-validation: In standard k-fold cross-validation, we partition the data int
 
 
 
-#### Feature Importance
+#### 1- Feature Importance
 You can get the feature importance of each feature of your dataset by using the feature importance property of the model. Feature importance gives you a score for each feature of your data, the higher the score more important or relevant is the feature towards your output variable. Feature importance is an inbuilt class that comes with Tree Based Classifiers, we will be using Extra Tree Classifier for extracting the top 15 features for the dataset.
 
 
@@ -97,7 +97,7 @@ Support Vector Machine  Accuracy on Test Data: 0.9649122807017544 , F1 : 0.97222
 
 
 
-#### Principal component analysis (PCA)
+#### 2- Principal component analysis (PCA)
 Principal component analysis (PCA) is a technique for reducing the dimensionality https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html.
 
 ![text_alt](Image/PCA.png)
@@ -106,12 +106,13 @@ Principal component analysis (PCA) is a technique for reducing the dimensionalit
 As shown on the last plot. 11 componants give us high accuracy. We adopt this number.
 
 Random Forsest Accuracy on Test Data: 0.9415204678362573 , F1 : 0.9537037037037037.
+
 Support Vector Machine  Accuracy on Test Data: 0.9649122807017544 , F1 : 0.9724770642201834.
 
 
 
 
-#### Feature Selection by using Correlation Heatmap.
+#### 3- Feature Selection by using Correlation Heatmap.
 
 ![text_alt](Image/e1_strong_correlation_between_columns.png)
 As we seen in the heatmap each two-column show less than 0.9 we selected and the greater than 0.9 we drop one of them.
