@@ -113,7 +113,6 @@ Support Vector Machine  Accuracy on Test Data: 0.9649122807017544 , F1 : 0.97247
 
 
 #### 3- Feature Selection by using Correlation Heatmap.
-
 ![text_alt](Image/e1_strong_correlation_between_columns.png)
 As we seen in the heatmap each two-column show less than 0.9 we selected and the greater than 0.9 we drop one of them.
 
@@ -133,7 +132,9 @@ let try Deep learning with pca .
 #### Deep Learning with PCA.
 
 Activation Functions is relu.
+
 Loss Function is Binary Crossentropy.
+
 optimizer is adam.
 
 We get 0.9590643.
